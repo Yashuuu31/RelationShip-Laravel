@@ -13,6 +13,12 @@ class User1 extends Model
     
     public function image()
     {
-        return $this->morphOne(Image1::class, 'imageable');
+        return $this->morphMany(Image1::class, 'imageable');
+    }
+
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role1::class, 'role1_user1', 'user1_id', 'role1_id');
     }
 }

@@ -20,7 +20,13 @@ Route::get('/', [RelationShipController::class, 'index']);
 Route::get('relation_ship/one_to_one', [RelationShipController::class, 'OneToOne'])->name('one_to_one');
 Route::get('relation_ship/one_to_many', [RelationShipController::class, 'OneToMany'])->name('one_to_many');
 Route::get('relation_ship/one_to_one_belong', [RelationShipController::class, 'OneToOneBelong'])->name('one_to_one_belong');
+Route::get('relation_ship/many_to_many_belong', [RelationShipController::class, 'ManyToManyBelong'])->name('many_to_many_belong');
 Route::get('relation_ship/has_one_through', [RelationShipController::class, 'HasOneThrough'])->name('has_one_through');
 Route::get('relation_ship/has_many_through', [RelationShipController::class, 'HasManyThrough'])->name('has_many_through');
 
 Route::get('relation_ship/one_to_oneP', [RelationShipController::class, 'OneToOneP'])->name('one_to_oneP');
+Route::get('relation_ship/one_to_manyP', [RelationShipController::class, 'OneToManyP'])->name('one_to_manyP');
+Route::get('relation_ship/many_to_manyP', [RelationShipController::class, 'ManyToManyP'])->name('many_to_manyP');
+
+Route::get('relation_ship/DynamicProperties', [RelationShipController::class, 'DynamicProperties'])->name('DynamicProperties');
+Route::get('relation_ship/RelationshipExistence', [RelationShipController::class, 'RelationshipExistence'])->name('RelationshipExistence');
